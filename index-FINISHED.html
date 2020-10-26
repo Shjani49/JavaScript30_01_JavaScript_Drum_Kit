@@ -2,97 +2,78 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>JS + CSS Clock</title>
+    <title>Scoped CSS Variables and JS</title>
 </head>
 <body>
+    <h2>Update CSS Variables with <span class='hl'>JS</span></h2>
 
-
-    <div class="clock">
-        <div class="clock-face">
-            <div class="hand hour-hand"></div>
-            <div class="hand min-hand"></div>
-            <div class="hand second-hand"></div>
-        </div>
+    <div class="controls">
+        <!--For Space... -->
+        <label for="spacing">Spacing:</label>
+        <input id="spacing" type="range" name="spacing" min="10" max="200" value="10" data-sizing="px">
+        <!--For Blur... -->
+        <label for="blur">Blur:</label>
+        <input id="blur" type="range" name="blur" min="0" max="25" value="10" data-sizing="px">
+        <!--For Base Color... -->
+        <label for="base">Base Color</label>
+        <input id="base" type="color" name="base" value="#ffc600">
     </div>
 
+    <img src="https://source.unsplash.com/7bwQXzbF6KE/800x500">
 
     <style>
-        html {
-            background: #018DED url(https://unsplash.it/1500/1000?image=881&blur=5);
-            background-size: cover;
-            font-family: 'helvetica neue';
-            text-align: center;
-            font-size: 10px;
-        }
+            :root {
+                --base: #ffc600;
+                --spacing: 10px;
+                --blur: 10px;
+            }
 
-        body {
-            margin: 0;
-            font-size: 2rem;
-            display: flex;
-            flex: 1;
-            min-height: 100vh;
-            align-items: center;
-        }
+            img {
+                padding: var(--spacing);
+                background: var(--base);
+                filter: blur(var(--blur));
+            }
 
-        .clock {
-            width: 30rem;
-            height: 30rem;
-            border: 20px solid white;
-            border-radius: 50%;
-            margin: 50px auto;
-            position: relative;
-            padding: 2rem;
-            box-shadow: 0 0 0 4px rgba(0,0,0,0.1), inset 0 0 0 3px #EFEFEF, inset 0 0 10px black, 0 0 10px rgba(0,0,0,0.2);
-        }
+            .hl {
+                color: var(--base);
+            }
 
-        .clock-face {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            transform: translateY(-3px); /* account for the height of the clock hands */
-        }
+            /*
+          misc styles, nothing to do with CSS variables
+        */
 
-        .hand {
-            width: 50%;
-            height: 6px;
-            background: black;
-            position: absolute;
-            top: 50%;
-            transform-origin: 100%;
-            transform: rotate(90deg);
-            transition: all 0.05s;
-            /* The transition-timing-function property specifies the speed curve of the transition effect.*/
-            /* This property allows a transition effect to change speed over its duration.*/
-            /* @Link: https://www.w3schools.com/cssref/func_cubic-bezier.asp */
-            transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
-        }
+            body {
+                text-align: center;
+                background: #193549;
+                color: white;
+                font-family: 'helvetica neue', sans-serif;
+                font-weight: 100;
+                font-size: 50px;
+            }
+
+            .controls {
+                margin-bottom: 50px;
+            }
+
+            input {
+                width: 100px;
+            }
     </style>
 
     <script>
-        const secondHand = document.querySelector('.second-hand');
-        const minsHand = document.querySelector('.min-hand');
-        const hourHand = document.querySelector('.hour-hand');
+        const inputs = document.querySelectorAll('.controls input');
 
-        function setDate() {
-            const now = new Date();
-            // Seconds...
-            const seconds = now.getSeconds();
-            const secondsDegrees = ((seconds / 60) * 360) + 90;
-            secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
-            // Mins..
-            const mins = now.getMinutes();
-            const minsDegrees = ((mins / 60) * 360) + ((seconds / 60) * 6) + 90;
-            minsHand.style.transform = `rotate(${minsDegrees}deg)`;
-            // Hour...
-            const hour = now.getHours();
-            const hourDegrees = ((hour / 12) * 360) + ((mins / 60) * 30) + 90;
-            hourHand.style.transform = `rotate(${hourDegrees}deg)`;
+        function handleUpdate() {
+            // suffix ex: px, % ...Here we use px...
+            const suffix = this.dataset.sizing || '';
+            // this.name could be spacing, blur or base
+            document.documentElement.style.setProperty(`--${this.name}`, this.value + suffix);
         }
 
-        setInterval(setDate, 1000);
-
-        setDate();
-
+        inputs.forEach(input => input.addEventListener('change', handleUpdate));
+        inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));
     </script>
+
+
 </body>
 </html>
