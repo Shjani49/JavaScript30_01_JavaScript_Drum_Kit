@@ -1,5 +1,5 @@
 ﻿// JavaScript source code
-
+// @Link: https://github.com/wesbos/JavaScript30/blob/master/11%20-%20Custom%20Video%20Player/scripts-FINISHED.js
 /* Get Our Elements */
 const player = document.querySelector('.player');
 const video = player.querySelector('.viewer');
