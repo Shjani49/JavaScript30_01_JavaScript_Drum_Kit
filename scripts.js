@@ -14,3 +14,14 @@ function debounce(func, wait = 20, immediate = true) {
         if (callNow) func.apply(context, args);
     };
 };
+
+const sliderImages = document.querySelectorAll('.slide-in');
+window.addEventListener('scroll', debounce(checkSlide));
+
+
+function checkSlide() {
+    sliderImages.forEach(sliderImage => {
+        // half way through the image
+        const slideInAt = (window.scrollY + window.innerHeight) - sliderImage.height / 2;
+    });
+}
