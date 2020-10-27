@@ -30,6 +30,32 @@
         const itemsList = document.querySelector('.plates');
         const items = []; // storing all our data in an array(Array of Object)
 
+        function addItem(e) {
+            e.preventDefault();
+            const text = (this.querySelector('[name=item]')).value;
+            const item = {
+                text,
+                done: false
+            };
+            items.push(item);
+            populateList(items, itemsList);
+            this.reset();
+        }
+
+        function populateList(plates = [], platesList) {
+            platesList.innerHTML = plates.map((plate, i) => { // loop through every signle item in Array and Map the data 
+                // map return an Array...
+                return `
+        <li>
+          <input type="checkbox" data-index=${i} id="item${i}" ${plate.done ? 'checked' : ''} />
+          <label for="item${i}">${plate.text}</label>
+        </li>
+      `;
+            }).join(''); // join take array and join as big string 
+        }
+
+        addItems.addEventListener('submit', addItem);
+
     </script>
 </body>
 </html>
