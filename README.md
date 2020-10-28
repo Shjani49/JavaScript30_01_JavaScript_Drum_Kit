@@ -15,7 +15,10 @@ At the end of the Day 2 of my intership I finished 15 of 30 days of JavaScript i
 we can easily add css inside console.log().we can also use `console.warn()` for Warning, `console.error()` for Error message, `console.assert()` for Testing, `console.groupcollapsed()` for Grouping together, and last but not least `console.timing()` to see time of fetching data.
 
 I also learned Group Checked box with ShiftKey, few of window Events, transform in css, sprade Array, Break down point in Inspect(browser),Slide in on Scroll(Slide in images on document when we Scroll page), how to store our data in to localStorage(persistents Data), and Event Delegation.
-
 I found fun and interest in custom video player, Persistents Data and cornify_Add() Method.
+# Custom Video Player
+
+![Custom Video Player](https://github.com/Shjani49/JavaScript30_01_JavaScript_Drum_Kit/blob/11_Custom_Video_player/Custom_Video_player.png)
+
 
 
