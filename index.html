@@ -10,5 +10,23 @@
     <div class="hero">
         <h1 contenteditable>Shivani</h1>
     </div>
+    <script>
+        const hero = document.querySelector('.hero');
+        const text = hero.querySelector('h1');
+        function shadow(e) {
+            const { offsetWidth: width, offsetHeight: height } = hero;
+            let { offsetX: x, offsetY: y } = e; // offsetX and offsetY are position of our cursor 
+            console.log(x, y);// value of x and y on mouse move event (top conrner start with 0)
+
+            console.log(this, e.target);// this give us a <div> whih is in our case is hero and e.target give us <h1> whichh is Shivani 
+            if (this !== e.target) {
+                x = x + e.target.offsetLeft;
+                y = y + e.target.offsetTop;
+            }
+            console.log(x, y);
+        }
+
+        hero.addEventListener('mousemove', shadow);
+    </script>
 </body>
 </html>
