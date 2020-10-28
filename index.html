@@ -190,7 +190,17 @@
             .map(timeCode => {
                 const [mins, secs] = timeCode.split(':').map(parseFloat);
                 return (mins * 60) + secs;
-            })
+            }) // Refuce takes in an Array and return anything we want.. it could be a Number,String or an Object...
+            .reduce((total, vidSeconds) => total + vidSeconds); // Toatl number of Seconds from All Videos
+
+        let secondsLeft = seconds;
+        const hours = Math.floor(secondsLeft / 3600); // get the Hours
+        secondsLeft = secondsLeft % 3600; // get the Seconds after hours
+
+        const mins = Math.floor(secondsLeft / 60); // get the Mins 
+        secondsLeft = secondsLeft % 60; // Update the seconds after convent in to mins
+
+        console.log(hours, mins, secondsLeft); // Display the Hours mins and Seconds 
     </script>
 </body>
 </html>
