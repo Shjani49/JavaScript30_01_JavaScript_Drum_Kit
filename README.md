@@ -10,12 +10,12 @@ this course.
 `1) Console.table(); 2) How we can use variable in Regular Expression 3) Array Methods(some and every) 4) HSL => For Rainbow Colours 5) CSS Variable updates using javascript 6) Transform - was very fun`
 
 # Day 2: Daily Learning Journal 
-At the end of the Day 2 of my intership I finished 15 of 30 days of JavaScript in 30 days course. The Second went well. I really enjoyed all tutorials and learned new things. I can't imagine that I can make custom video player in 45 mins...but I made it. I also learned Styled using console.log.For Example 
+At the end of the Day 2 of my internship I finished 15 of 30 days of JavaScript in 30 days course. The Second went well. I really enjoyed all tutorials and learned new things. I can't imagine that I can make custom video player in 45 mins...but I made it. I also learned Styled using console.log.For Example 
 ` console.log('%c I'm Some great text','font-size:50px; background:red'); `
 we can easily add css inside console.log().we can also use `console.warn()` for Warning, `console.error()` for Error message, `console.assert()` for Testing, `console.groupcollapsed()` for Grouping together, and last but not least `console.timing()` to see time of fetching data.
 
-I also learned Group Checked box with ShiftKey, few of window Events, transform in css, sprade Array, Break down point in Inspect(browser),Slide in on Scroll(Slide in images on document when we Scroll page), how to store our data in to localStorage(persistents Data), and Event Delegation.
-I found fun and interest in custom video player, Persistents Data and cornify_Add() Method.
+I also learned Group Checkbox with ShiftKey, few of window Events, transform in css, sprade Array, Break down point in Inspect(browser),Slide in on Scroll(Slide in images on document when we Scroll page), how to store our data in to localStorage(persistence Data), and Event Delegation.
+I found fun and interest in custom video player, persistence Data and cornify_Add() Method.
 # Custom Video Player
 
 ![Custom Video Player](https://github.com/Shjani49/JavaScript30_01_JavaScript_Drum_Kit/blob/11_Custom_Video_player/Custom_Video_player.png)
