@@ -9,7 +9,7 @@ We can do so many new things only with javaScript(without any FrameWork and libr
 this course. 
 `1) Console.table(); 2) How we can use variable in Regular Expression 3) Array Methods(some and every) 4) HSL => For Rainbow Colours 5) CSS Variable updates using javascript 6) Transform - was very fun`
 
-Please click here to watch video: ![Day 1: Daily Learning Exp](https://drive.google.com/file/d/18tfVuYWouqBoN96mTKtdNlxqxy4oXflG/view?usp=sharing)
+Please click here to watch video: Day 1: Daily Learning Exp: https://drive.google.com/file/d/18tfVuYWouqBoN96mTKtdNlxqxy4oXflG/view?usp=sharing
 
 # Day 2: Daily Learning Journal 
 At the end of the Day 2 of my internship I finished 15 of 30 days of JavaScript in 30 days course. The Second day went well. I really enjoyed all tutorials and learned new things. I can't imagine that I can make custom video player in 45 mins...but I made it. I also learned Styled using console.log.For Example 
