@@ -21,12 +21,12 @@ function randomHole(holes) {
 }
 
 function peep() {
-    const time = randomTime(200, 1000);// We change the random time for different level of game; For Expert level: we can set the randomTime(50,300);
+    const time = randomTime(200, 1000);
     const hole = randomHole(holes);
     hole.classList.add('up');
     setTimeout(() => {
         hole.classList.remove('up');
-        if (!timeUp) peep 
+        if (!timeUp) peep();
     }, time);
 }
 
