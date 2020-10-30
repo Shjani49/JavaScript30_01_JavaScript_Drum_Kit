@@ -37,5 +37,12 @@ I also learned Geolocation. In Geolocation, we can find the direction of the per
 
 ![unreal webcam in browser](https://github.com/Shjani49/JavaScript30_01_JavaScript_Drum_Kit/blob/19_unreal_WebCam_Fun/webcam_Fun.PNG)
 
+# Day 4: Daily Learning Journal 
+Yeeee!!!Today, I finished 30 of 30 days of JavaScript in 30 days courses. I'm happy that I learned this 30-days course in 4 days. Today I build a game using JavaScript.It was a really fun and interesting game. I build "Whack-a-mole!". What happens when we run the game we go to get the little mole popping up in random holes for random amounts of time and when we click them we get points. Next, I created a time-down counter that shows us how many seconds are left in some sort of task like we have a quick 5 min break or 15 mins break, lunch break going on...We also set the time that we like to down. Through this exercise, I learned the `Date. now()` which is a static method. Before this I only know about `(new Date()).gettime()`method. Third, I learned to click and drag effect using mouse events and mouse positioning events. I had fun with CSS Rotate for sliders. Multiple scrolling was interesting. It's just a combination of the mouse down, up, leave, out, and the mouse moves events.
 
+I also learned stripe followed along with dropdown. When we hover over the top of bit, it shows the Dropdown but the really cool part about it is that the background of the dropdown seems to be able to transform itself from width and height as well as whenever is on the page. When I first time show it I was thinking how did they do that? It was incredible and what I found is that dropdowns themselves like the content text has those separate elements but there is a sort of div that follows each of those dropdowns around and will reside itself based on whenever it is on the page.
+
+The other cool thing I learned about propagation, bubbling, event capturing and new property "once." These all are part of the Event Listener. Bubbling means the browser will figure out what we clicked on but it also triggers clicks up so, when we click on the innermost one(div) it will trigger an event on the parent too. To stop that we need to use `event.stopPropagatio() // Stop bubbling.`
+
+The sticky Navigation Bar, Video Speed Controller, and SpeechSynthesis were also good. Overall, I learned so many new things. 
 
